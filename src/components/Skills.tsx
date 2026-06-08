@@ -16,7 +16,7 @@ export default function Skills() {
         Minhas Skills
       </h2>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {skills.map((skill) => (
           <div
             key={skill.name}

@@ -73,7 +73,7 @@ export default function Contact() {
         Contato
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {contacts.map((contact) => {
           const Icon = contact.icon
           const style = colors[contact.color as keyof typeof colors]
@@ -121,7 +121,7 @@ export default function Contact() {
                     {contact.title}
                   </h3>
 
-                  <p className="text-gray-400 mt-1">
+                  <p className="text-gray-400 mt-1 break-all text-sm sm:text-base">
                     {contact.value}
                   </p>
                 </div>

@@ -39,7 +39,7 @@ export default function Projects() {
         Projetos em Destaque
       </h2>
 
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
         {projects.map((project) => (
           <div
             key={project.title}
@@ -48,33 +48,36 @@ export default function Projects() {
               border border-white/10
               rounded-2xl
               overflow-hidden
+              w-full
+              max-w-md
+              mx-auto
               hover:border-purple-500
               hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]
               hover:-translate-y-2
               transition-all
               duration-300
-              "
+            "
           >
             {project.image ? (
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-56 w-full object-cover"
+                className="h-40 sm:h-48 lg:h-56 w-full object-cover"
               />
             ) : (
-              <div className="h-40 bg-gradient-to-br from-purple-600 to-blue-600" />
+              <div className="h-40 sm:h-48 lg:h-56 bg-gradient-to-br from-purple-600 to-blue-600" />
             )}
 
-            <div className="p-5">
-              <h3 className="font-bold text-xl">
+            <div className="p-4 sm:p-5">
+              <h3 className="font-bold text-lg sm:text-xl">
                 {project.title}
               </h3>
 
-              <p className="text-gray-400 text-sm mt-2">
+              <p className="text-gray-400 text-xs sm:text-sm mt-2">
                 {project.tech}
               </p>
 
-              <p className="text-gray-500 text-sm mt-3 min-h-[48px]">
+              <p className="text-gray-500 text-sm mt-3">
                 {project.description}
               </p>
 

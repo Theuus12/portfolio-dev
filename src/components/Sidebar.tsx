@@ -44,12 +44,12 @@ export default function Sidebar() {
   }, [])
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-64 bg-[#050816]/90 backdrop-blur-xl border-r border-white/10 p-6">
-      <h1 className="text-2xl font-bold mb-10">
-        Dev<span className="text-purple-500">Portfolio</span>
-      </h1>
+  <aside className="fixed left-0 bottom-0 lg:top-0 lg:h-screen w-full lg:w-64 bg-[#050816]/90 backdrop-blur-xl border-t lg:border-t-0 lg:border-r border-white/10 p-3 lg:p-6 z-50">
+    <h1 className="hidden lg:block text-2xl font-bold mb-10">
+      Dev<span className="text-purple-500">Portfolio</span>
+    </h1>
 
-      <nav className="space-y-3">
+    <nav className="flex lg:block justify-around lg:space-y-3">
         {menu.map((item) => {
           const Icon = item.icon
           const isActive = activeSection === item.id
@@ -68,7 +68,10 @@ export default function Sidebar() {
               `}
             >
               <Icon size={20} />
-              {item.name}
+
+              <span className="hidden sm:inline lg:inline">
+                 {item.name}
+              </span>
             </a>
           )
         })}

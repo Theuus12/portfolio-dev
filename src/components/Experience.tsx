@@ -35,7 +35,7 @@ export default function Experience() {
             key={exp.title}
             className="bg-white/5 border border-white/10 rounded-2xl p-6"
           >
-            <div className="flex justify-between items-center mb-3">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-3">
               <h3 className="text-xl font-bold">
                 {exp.title}
               </h3>
