@@ -100,7 +100,7 @@ function App() {
                 Origens Tale
               </p>
               <p className="text-gray-400 text-xs sm:text-base">
-                Projeto Ativo
+                Servidor encerrado
               </p>
             </div>
 

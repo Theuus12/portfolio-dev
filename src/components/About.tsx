@@ -1,45 +1,23 @@
 import SectionReveal from './SectionReveal'
 
+const paragraphs = [
+  'Sou desenvolvedor Full Stack em forma\u00e7\u00e3o cont\u00ednua, com base em An\u00e1lise e Desenvolvimento de Sistemas. Tenho experi\u00eancia pr\u00e1tica com HTML, CSS, JavaScript, React, Node.js, bancos de dados SQL e interfaces responsivas.',
+  'Durante oito meses, trabalhei no servidor de MMORPG Origens Tale, hoje encerrado. Nesse per\u00edodo, atuei no website, em sistemas internos, no banco de dados e na manuten\u00e7\u00e3o t\u00e9cnica da plataforma.',
+  'Tamb\u00e9m desenvolvi os projetos-base de demonstra\u00e7\u00e3o Olha o Produto, com React e TypeScript, e V\u00e9rtice Autom\u00f3veis, com HTML, CSS e JavaScript. Eles apresentam prot\u00f3tipos de interfaces e funcionalidades para produtos e ve\u00edculos.',
+  'Minha experi\u00eancia anterior como T\u00e9cnico de Inform\u00e1tica fortaleceu minhas habilidades em suporte, manuten\u00e7\u00e3o de computadores e resolu\u00e7\u00e3o de problemas.',
+]
+
 export default function About() {
   return (
     <SectionReveal>
       <section id="about" className="mt-12">
-        <h2 className="text-3xl font-bold mb-6">
-          Sobre Mim
-        </h2>
-
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-          <p className="text-gray-300 leading-8">
-            Sou um Desenvolvedor Full Stack em formação contínua, com base em
-            Análise e Desenvolvimento de Sistemas, Front-end moderno e lógica de
-            programação. Tenho experiência prática com HTML, CSS, JavaScript,
-            React, Node.js, bancos de dados SQL e criação de interfaces
-            responsivas.
-
-            <br />
-            <br />
-
-            Atualmente desenvolvo e mantenho o Origens Tale, projeto próprio onde
-            atuo em diferentes frentes, incluindo website, sistemas internos,
-            banco de dados, manutenção técnica e evolução da plataforma.
-
-            <br />
-            <br />
-
-            Além disso, desenvolvi protótipos e projetos experimentais como o
-            Olha o Produto, aplicando conceitos de React, TypeScript, consumo de
-            APIs e experiência de usuário. Esses projetos refletem meu processo de
-            aprendizado, minha capacidade de transformar ideias em aplicações
-            funcionais e minha busca constante por evolução profissional.
-
-            <br />
-            <br />
-
-            Também possuo experiência anterior como Técnico de Informática, com
-            atuação em suporte, manutenção de computadores, configuração de
-            sistemas e atendimento a usuários, o que fortaleceu minha base técnica,
-            resolução de problemas e adaptação a diferentes ambientes.
-          </p>
+        <h2 className="mb-6 text-3xl font-bold">Sobre Mim</h2>
+        <div className="space-y-5 rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
+          {paragraphs.map((paragraph) => (
+            <p key={paragraph} className="text-gray-300 leading-8">
+              {paragraph}
+            </p>
+          ))}
         </div>
       </section>
     </SectionReveal>

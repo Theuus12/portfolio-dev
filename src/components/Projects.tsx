@@ -6,28 +6,28 @@ export default function Projects() {
   const projects = [
     {
       title: 'Origens Tale',
-      tech: 'React • Node.js • SQL',
-      description: 'Website oficial do servidor MMORPG Origens Tale.',
+      tech: 'React \u2022 Node.js \u2022 SQL',
+      description: 'Website e ferramentas digitais desenvolvidos para o servidor MMORPG Origens Tale, hoje encerrado.',
       image: origensImg,
       link: 'https://origenstale.com.br/',
     },
     {
       title: 'Olha o Produto',
-      tech: 'React • TypeScript • API',
-      description: 'Plataforma para visualização e análise de produtos.',
+      tech: 'React \u2022 TypeScript \u2022 API',
+      description: 'Projeto-base de demonstra\u00e7\u00e3o de cat\u00e1logo e avalia\u00e7\u00e3o de produtos, com busca e filtros.',
       image: olhaImg,
       link: 'https://olhaoproduto.vercel.app/',
     },
     {
-      title: 'Vértice Automóveis',
-      tech: 'HTML • CSS • JavaScript',
-      description: 'Vitrine multimarca com catálogo, filtros e favoritos para encontrar a próxima viatura.',
+      title: 'V\u00e9rtice Autom\u00f3veis',
+      tech: 'HTML \u2022 CSS \u2022 JavaScript',
+      description: 'Projeto-base de demonstra\u00e7\u00e3o de cat\u00e1logo de viaturas, com pesquisa, filtros e favoritos.',
       image: verticeImg,
       link: 'https://theuus12.github.io/site-stand-viaturas/',
     },
     {
       title: 'Task Manager',
-      tech: 'React • Node.js • Socket.io',
+      tech: 'React \u2022 Node.js \u2022 Socket.io',
       description: 'Gerenciador de tarefas colaborativo.',
       image: null,
       link: '#',
@@ -36,11 +36,9 @@ export default function Projects() {
 
   return (
     <section id="projects" className="mt-12">
-      <h2 className="text-3xl font-bold mb-6">
-        Projetos em Destaque
-      </h2>
+      <h2 className="mb-6 text-3xl font-bold">Projetos em Destaque</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4">
         {projects.map((project) => (
           <a
             key={project.title}
@@ -48,49 +46,24 @@ export default function Projects() {
             target="_blank"
             rel="noreferrer"
             aria-label={`Abrir projeto ${project.title}`}
-            className="
-              bg-white/5
-              border border-white/10
-              rounded-2xl
-              overflow-hidden
-              w-full
-              max-w-md
-              mx-auto
-              hover:border-purple-500
-              hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]
-              hover:-translate-y-2
-              transition-all
-              duration-300
-              block
-              text-inherit
-              no-underline
-            "
+            className="block w-full max-w-md mx-auto overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-inherit no-underline transition-all duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]"
           >
             {project.image ? (
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-40 sm:h-48 lg:h-56 w-full object-cover"
+                className="h-40 w-full object-cover sm:h-48 lg:h-56"
               />
             ) : (
-              <div className="h-40 sm:h-48 lg:h-56 bg-gradient-to-br from-purple-600 to-blue-600" />
+              <div className="h-40 bg-gradient-to-br from-purple-600 to-blue-600 sm:h-48 lg:h-56" />
             )}
 
             <div className="p-4 sm:p-5">
-              <h3 className="font-bold text-lg sm:text-xl">
-                {project.title}
-              </h3>
-
-              <p className="text-gray-400 text-xs sm:text-sm mt-2">
-                {project.tech}
-              </p>
-
-              <p className="text-gray-500 text-sm mt-3">
-                {project.description}
-              </p>
-
-              <span className="inline-block mt-4 text-purple-400">
-                {project.link.startsWith('https://github.com/') ? 'Ver repositório' : 'Ver Projeto'}
+              <h3 className="text-lg font-bold sm:text-xl">{project.title}</h3>
+              <p className="mt-2 text-xs text-gray-400 sm:text-sm">{project.tech}</p>
+              <p className="mt-3 text-sm text-gray-500">{project.description}</p>
+              <span className="mt-4 inline-block text-purple-400">
+                {project.link.startsWith('https://github.com/') ? 'Ver reposit\u00f3rio' : 'Ver Projeto'}
               </span>
             </div>
           </a>
