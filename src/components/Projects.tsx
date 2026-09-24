@@ -23,7 +23,7 @@ export default function Projects() {
       tech: 'HTML • CSS • JavaScript',
       description: 'Vitrine multimarca com catálogo, filtros e favoritos para encontrar a próxima viatura.',
       image: verticeImg,
-      link: 'https://github.com/Theuus12/site-stand-viaturas',
+      link: 'https://theuus12.github.io/site-stand-viaturas/',
     },
     {
       title: 'Task Manager',
