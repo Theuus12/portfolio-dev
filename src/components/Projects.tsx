@@ -1,5 +1,6 @@
 import origensImg from '../assets/origens.png'
 import olhaImg from '../assets/olhaoproduto.png'
+import verticeImg from '../assets/vertice-preview.png'
 
 export default function Projects() {
   const projects = [
@@ -18,11 +19,11 @@ export default function Projects() {
       link: 'https://olhaoproduto.vercel.app/',
     },
     {
-      title: 'Dashboard Analytics',
-      tech: 'React • TypeScript • SQL',
-      description: 'Dashboard com métricas e gráficos em tempo real.',
-      image: null,
-      link: '#',
+      title: 'Vértice Automóveis',
+      tech: 'HTML • CSS • JavaScript',
+      description: 'Vitrine multimarca com catálogo, filtros e favoritos para encontrar a próxima viatura.',
+      image: verticeImg,
+      link: 'https://github.com/Theuus12/site-stand-viaturas',
     },
     {
       title: 'Task Manager',
@@ -87,7 +88,7 @@ export default function Projects() {
                 rel="noreferrer"
                 className="inline-block mt-4 text-purple-400 hover:text-purple-300"
               >
-                Ver Projeto →
+                {project.link.startsWith('https://github.com/') ? 'Ver repositório' : 'Ver Projeto'}
               </a>
             </div>
           </div>
