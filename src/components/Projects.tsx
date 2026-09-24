@@ -42,8 +42,12 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
         {projects.map((project) => (
-          <div
+          <a
             key={project.title}
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Abrir projeto ${project.title}`}
             className="
               bg-white/5
               border border-white/10
@@ -57,6 +61,9 @@ export default function Projects() {
               hover:-translate-y-2
               transition-all
               duration-300
+              block
+              text-inherit
+              no-underline
             "
           >
             {project.image ? (
@@ -82,16 +89,11 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block mt-4 text-purple-400 hover:text-purple-300"
-              >
+              <span className="inline-block mt-4 text-purple-400">
                 {project.link.startsWith('https://github.com/') ? 'Ver repositório' : 'Ver Projeto'}
-              </a>
+              </span>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
