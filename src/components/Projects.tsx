@@ -32,13 +32,6 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
       link: 'https://www.raposinhalive.com',
     },
-    {
-      title: 'Task Manager',
-      tech: 'React \u2022 Node.js \u2022 Socket.io',
-      description: 'Gerenciador de tarefas colaborativo.',
-      image: null,
-      link: '#',
-    },
   ]
 
   return (
