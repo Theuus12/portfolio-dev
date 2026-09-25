@@ -26,6 +26,13 @@ export default function Projects() {
       link: 'https://theuus12.github.io/site-stand-viaturas/',
     },
     {
+      title: 'Raposinha Live',
+      tech: 'Links • Conteúdo • Presença digital',
+      description: 'Uma página central para criadores de conteúdo e empresas reunirem seus principais links, canais e formas de contato em um só lugar.',
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
+      link: 'https://www.raposinhalive.com',
+    },
+    {
       title: 'Task Manager',
       tech: 'React \u2022 Node.js \u2022 Socket.io',
       description: 'Gerenciador de tarefas colaborativo.',
