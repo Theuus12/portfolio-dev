@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1813 868" role="img" aria-labelledby="title desc">
+  <title id="title">Página centralizadora de links da Raposinha Live</title>
+  <desc id="desc">Painel roxo Meus Links com atalhos para Twitch, YouTube, Discord, Instagram e outros links.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="48%" r="70%"><stop stop-color="#18052f"/><stop offset=".62" stop-color="#0c031c"/><stop offset="1" stop-color="#05030e"/></radialGradient>
+    <radialGradient id="glow"><stop stop-color="#6700ff" stop-opacity=".64"/><stop offset="1" stop-color="#6700ff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="panel" x2=".9" y2="1"><stop stop-color="#10071f"/><stop offset="1" stop-color="#070510"/></linearGradient>
+    <linearGradient id="row" x2="1" y2="1"><stop stop-color="#241044"/><stop offset="1" stop-color="#100b1d"/></linearGradient>
+    <linearGradient id="icon" x2="1" y2="1"><stop stop-color="#741dff"/><stop offset="1" stop-color="#4710a2"/></linearGradient>
+    <linearGradient id="titleGlow" x2="1"><stop stop-color="#aa52ff"/><stop offset="1" stop-color="#7132e8"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="45"/></filter>
+    <filter id="shine"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1813v868H0z"/>
+  <ellipse cx="215" cy="185" rx="230" ry="180" fill="url(#glow)" filter="url(#blur)"/>
+  <ellipse cx="1600" cy="740" rx="260" ry="185" fill="url(#glow)" filter="url(#blur)"/>
+  <rect x="586" y="38" width="641" height="792" rx="33" fill="url(#panel)" stroke="#7415ee" stroke-width="2"/>
+  <circle cx="906" cy="139" r="73" fill="#100822" stroke="#761aff" stroke-width="5" filter="url(#shine)"/>
+  <g fill="none" stroke="#eee6ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+    <path d="m884 143 25-25a17 17 0 0 1 24 24l-15 15a17 17 0 0 1-24 0"/>
+    <path d="m929 135-25 25a17 17 0 0 1-24-24l15-15a17 17 0 0 1 24 0"/>
+  </g>
+  <text x="906" y="272" text-anchor="middle" fill="#f7f5ff" font-family="Arial,sans-serif" font-size="53" font-weight="700">Meus <tspan fill="url(#titleGlow)">Links</tspan></text>
+  <text x="906" y="310" text-anchor="middle" fill="#d1c8e8" font-family="Arial,sans-serif" font-size="17" font-weight="600">Acesse minhas redes, plataformas e</text>
+  <text x="906" y="333" text-anchor="middle" fill="#d1c8e8" font-family="Arial,sans-serif" font-size="17" font-weight="600">outros conteúdos em um só lugar!</text>
+  <path d="M816 361h58m63 0h59" stroke="#9c31ff" stroke-width="2"/>
+  <g fill="none" stroke="#c881ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"><path d="m897 361 7-7a5 5 0 0 1 7 7l-4 4a5 5 0 0 1-7 0"/><path d="m914 361-7 7a5 5 0 0 1-7-7l4-4a5 5 0 0 1 7 0"/></g>
+  <g font-family="Arial,sans-serif">
+    <g><rect x="635" y="392" width="544" height="74" rx="24" fill="url(#row)" stroke="#7831c8"/><rect x="653" y="402" width="60" height="54" rx="15" fill="url(#icon)"/><path d="M670 418h26v18h-7l-7 7v-7h-12z" fill="#fff"/><text x="732" y="424" fill="#f7f5ff" font-size="18" font-weight="700">Twitch</text><text x="732" y="446" fill="#c9bfdc" font-size="14">Acompanhe minhas lives!</text><path d="M1141 425v-7h13v13h-7m5-12-13 13" fill="none" stroke="#d8c9f4" stroke-width="2"/></g>
+    <g><rect x="635" y="477" width="544" height="74" rx="24" fill="url(#row)" stroke="#7831c8"/><rect x="653" y="487" width="60" height="54" rx="15" fill="url(#icon)"/><rect x="668" y="502" width="30" height="23" rx="7" fill="#fff"/><path d="m680 507 10 6-10 6z" fill="#6420ce"/><text x="732" y="509" fill="#f7f5ff" font-size="18" font-weight="700">YouTube</text><text x="732" y="531" fill="#c9bfdc" font-size="14">Vídeos e conteúdos variados!</text><path d="M1141 510v-7h13v13h-7m5-12-13 13" fill="none" stroke="#d8c9f4" stroke-width="2"/></g>
+    <g><rect x="635" y="562" width="544" height="74" rx="24" fill="url(#row)" stroke="#7831c8"/><rect x="653" y="572" width="60" height="54" rx="15" fill="url(#icon)"/><path d="M668 591q12-9 25 0l3 18-7 4-3-4h-11l-3 4-7-4z" fill="#fff"/><circle cx="679" cy="598" r="2" fill="#6420ce"/><circle cx="689" cy="598" r="2" fill="#6420ce"/><text x="732" y="594" fill="#f7f5ff" font-size="18" font-weight="700">Discord</text><text x="732" y="616" fill="#c9bfdc" font-size="14">Faça parte da nossa comunidade!</text><path d="M1141 595v-7h13v13h-7m5-12-13 13" fill="none" stroke="#d8c9f4" stroke-width="2"/></g>
+    <g><rect x="635" y="647" width="544" height="74" rx="24" fill="url(#row)" stroke="#7831c8"/><rect x="653" y="657" width="60" height="54" rx="15" fill="url(#icon)"/><rect x="669" y="671" width="28" height="27" rx="8" fill="none" stroke="#fff" stroke-width="4"/><circle cx="683" cy="684" r="6" fill="none" stroke="#fff" stroke-width="3"/><circle cx="693" cy="675" r="2" fill="#fff"/><text x="732" y="679" fill="#f7f5ff" font-size="18" font-weight="700">Instagram</text><text x="732" y="701" fill="#c9bfdc" font-size="14">Acompanhe meu dia a dia!</text><path d="M1141 680v-7h13v13h-7m5-12-13 13" fill="none" stroke="#d8c9f4" stroke-width="2"/></g>
+    <g><rect x="635" y="732" width="544" height="74" rx="24" fill="url(#row)" stroke="#7831c8"/><rect x="653" y="742" width="60" height="54" rx="15" fill="url(#icon)"/><g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="m674 769 11-11a8 8 0 0 1 11 11l-6 6a8 8 0 0 1-11 0"/><path d="m691 769-11 11a8 8 0 0 1-11-11l6-6a8 8 0 0 1 11 0"/></g><text x="732" y="764" fill="#f7f5ff" font-size="18" font-weight="700">Outros Links</text><text x="732" y="786" fill="#c9bfdc" font-size="14">Mais redes, projetos e muito mais!</text><path d="M1141 765v-7h13v13h-7m5-12-13 13" fill="none" stroke="#d8c9f4" stroke-width="2"/></g>
+  </g>
+</svg>
