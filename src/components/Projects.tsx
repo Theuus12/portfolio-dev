@@ -67,7 +67,7 @@ export default function Projects() {
               <h3 className="text-lg font-bold sm:text-xl">{project.title}</h3>
               <p className="mt-2 text-xs text-gray-400 sm:text-sm">{project.tech}</p>
               <p className="mt-3 text-sm text-gray-500">{project.description}</p>
-              {project.link && (
+              {project.link && !project.current && (
                 <span className="mt-4 inline-block text-purple-400">
                   {project.link.startsWith('https://github.com/') ? 'Ver reposit\u00f3rio' : 'Ver Projeto'}
                 </span>
@@ -77,7 +77,24 @@ export default function Projects() {
           )
           const cardClassName = `${project.current ? "current-project-card" : ""} relative block w-full max-w-md mx-auto overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-inherit no-underline ${project.link ? 'transition-all duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]' : ''}`
 
-          return project.link ? (
+          return project.current ? (
+            <article key={project.title} className={cardClassName}>
+              {cardContent}
+              <div className="flex flex-wrap gap-3 px-4 pb-5 sm:px-5">
+                <a
+                  href="https://github.com/Theuus12/chaosboundprototipe/releases/download/v0.1.0-beta/Chaosbound-Beta-0.1.0-Windows-x64.zip"
+                  className="rounded-lg bg-amber-300 px-4 py-2 text-sm font-bold text-slate-950 hover:bg-amber-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-300"
+                  aria-label="Baixar versão beta do Jogo Indie para Windows 64 bits"
+                >
+                  Baixar beta · Windows 64 bits
+                </a>
+                <a href={project.link!} target="_blank" rel="noreferrer" className="rounded-lg border border-white/20 px-4 py-2 text-sm text-gray-200 hover:border-amber-300">
+                  Ver código
+                </a>
+              </div>
+              <p className="px-4 pb-5 text-xs text-gray-400 sm:px-5">Extraia o ZIP e abra o executável. Versão experimental 0.1.0.</p>
+            </article>
+          ) : project.link ? (
             <a key={project.title} href={project.link} target="_blank" rel="noreferrer" aria-label={`Abrir projeto ${project.title}`} className={cardClassName}>
               {cardContent}
             </a>
