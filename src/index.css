@@ -59,3 +59,33 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #a855f7, #60a5fa);
 }
+.current-project-card {
+  border: 2px solid #e8bc55;
+  box-shadow: 0 0 18px rgba(232, 188, 85, 0.2);
+  animation: current-project-glow 3s ease-in-out infinite;
+}
+.current-project-card:hover, .current-project-card:focus-visible {
+  border-color: #ffe6a0;
+  outline: 2px solid #e8bc55;
+  outline-offset: 4px;
+}
+.current-project-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  border: 1px solid #e8bc55;
+  border-radius: 999px;
+  background: rgba(15, 17, 26, 0.94);
+  color: #ffe6a0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+@keyframes current-project-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(232, 188, 85, 0.18); }
+  50% { box-shadow: 0 0 30px rgba(232, 188, 85, 0.42); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .current-project-card { animation: none; }
+}

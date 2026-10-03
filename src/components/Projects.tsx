@@ -1,3 +1,4 @@
+import indieImg from '../assets/jogo-indie.png'
 import origensImg from '../assets/origens.png'
 import olhaImg from '../assets/olhaoproduto.png'
 import verticeImg from '../assets/vertice-preview.png'
@@ -5,6 +6,14 @@ import raposinhaLinksImg from '../assets/raposinha-links-card.svg'
 
 export default function Projects() {
   const projects = [
+    {
+      title: 'Jogo Indie',
+      current: true,
+      tech: 'Godot 4 • GDScript • Gameplay 3D',
+      description: 'Meu projeto atual: um jogo indie de sobrevivência 3D, inspirado em Megabonk. Estou construindo ataques automáticos, inimigos que perseguem o jogador, armas evolutivas e uma progressão com XP, buffs e raridades. Um protótipo em constante evolução, desenvolvido com apoio de IA.',
+      image: indieImg,
+      link: 'https://github.com/Theuus12/chaosboundprototipe',
+    },
     {
       title: 'Origens Tale',
       tech: 'C# • SQL • IA/Codex • Texturas 3D',
@@ -39,7 +48,7 @@ export default function Projects() {
     <section id="projects" className="mt-12">
       <h2 className="mb-6 text-3xl font-bold">Projetos em Destaque</h2>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
         {projects.map((project) => {
           const cardContent = (
             <>
@@ -47,12 +56,13 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-40 w-full object-cover sm:h-48 lg:h-56"
+                className={`h-40 w-full sm:h-48 lg:h-56 ${project.current ? "object-contain bg-[#182438]" : "object-cover"}`}
               />
             ) : (
               <div className="h-40 bg-gradient-to-br from-purple-600 to-blue-600 sm:h-48 lg:h-56" />
             )}
 
+            {project.current && <span className="current-project-badge">Projeto atual</span>}
             <div className="p-4 sm:p-5">
               <h3 className="text-lg font-bold sm:text-xl">{project.title}</h3>
               <p className="mt-2 text-xs text-gray-400 sm:text-sm">{project.tech}</p>
@@ -65,7 +75,7 @@ export default function Projects() {
             </div>
             </>
           )
-          const cardClassName = `block w-full max-w-md mx-auto overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-inherit no-underline ${project.link ? 'transition-all duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]' : ''}`
+          const cardClassName = `${project.current ? "current-project-card" : ""} relative block w-full max-w-md mx-auto overflow-hidden rounded-2xl border border-white/10 bg-white/5 text-inherit no-underline ${project.link ? 'transition-all duration-300 hover:-translate-y-2 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]' : ''}`
 
           return project.link ? (
             <a key={project.title} href={project.link} target="_blank" rel="noreferrer" aria-label={`Abrir projeto ${project.title}`} className={cardClassName}>
