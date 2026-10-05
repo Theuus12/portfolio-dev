@@ -10,7 +10,7 @@ export default function Projects() {
       title: 'Jogo Indie',
       current: true,
       tech: 'Godot 4 • GDScript • Gameplay 3D',
-      description: 'Beta 0.2.0: sobrevivência 3D em uma floresta, com personagens modelados no Blender, hordas e chefe orc. Arco, Espada, Aura e Adaga reversa, cristais evolutivos e progressão por XP. Desenvolvido em Godot com apoio de IA.',
+      description: 'Beta 0.3.0: sobrevivência 3D com mapa ampliado, minimapa, colinas e totens de buffs. Salvas de flechas, escudo, pulos extras, cristais e hordas de até 100 inimigos. Um altar invoca o boss caveira e libera novos monstros após sua derrota. Desenvolvido em Godot com apoio de IA.',
       image: indieImg,
       link: 'https://github.com/Theuus12/chaosboundprototipe',
     },
@@ -82,7 +82,7 @@ export default function Projects() {
               {cardContent}
               <div className="flex flex-wrap gap-3 px-4 pb-5 sm:px-5">
                 <a
-                  href="https://github.com/Theuus12/chaosboundprototipe/releases/download/v0.2.0-beta/Chaosbound-Beta-0.2.0-Windows-x64.zip"
+                  href="https://github.com/Theuus12/chaosboundprototipe/releases/download/v0.3.0-beta/Chaosbound-Beta-0.3.0-Windows-x64.zip"
                   className="rounded-lg bg-amber-300 px-4 py-2 text-sm font-bold text-slate-950 hover:bg-amber-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-300"
                   aria-label="Baixar versão beta do Jogo Indie para Windows 64 bits"
                 >
@@ -92,7 +92,7 @@ export default function Projects() {
                   Ver código
                 </a>
               </div>
-              <p className="px-4 pb-5 text-xs text-gray-400 sm:px-5">Extraia o ZIP e abra o executável. Versão experimental 0.2.0.</p>
+              <p className="px-4 pb-5 text-xs text-gray-400 sm:px-5">Extraia o ZIP e abra o executável. Versão experimental 0.3.0.</p>
             </article>
           ) : project.link ? (
             <a key={project.title} href={project.link} target="_blank" rel="noreferrer" aria-label={`Abrir projeto ${project.title}`} className={cardClassName}>
